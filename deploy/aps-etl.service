@@ -1,0 +1,10 @@
+[Unit]
+Description=APS Goianira — ETL e-SUS APS
+
+[Service]
+Type=oneshot
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/aps-goianira/backend
+EnvironmentFile=/opt/aps-goianira/backend/.env
+ExecStart=/usr/bin/python3 etl_base.py

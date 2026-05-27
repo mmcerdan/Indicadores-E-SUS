@@ -1,0 +1,16 @@
+[Unit]
+Description=APS Goianira — Backend FastAPI
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/aps-goianira/backend
+EnvironmentFile=/opt/aps-goianira/backend/.env
+ExecStart=/usr/bin/python3 -m uvicorn main:app --host 127.0.0.1 --port 8000 --workers 2
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
