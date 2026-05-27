@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+node_modules/
+dist/
+_uvicorn_err.txt
+_uvicorn_out.txt
+backend/venv/
